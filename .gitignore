@@ -1,0 +1,6 @@
+# Ambientes virtuais (Python)
+.venv/
+venv/
+
+# Configurações da IDE (PyCharm, IntelliJ)
+.idea/
