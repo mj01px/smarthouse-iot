@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+/* ===== base ===== */
 :root{
   --bg:#0b0f17;
   --panel:#0f1626;
@@ -24,7 +24,7 @@ body{
   font-family: system-ui, Segoe UI, Arial, sans-serif;
 }
 
-/* ===== App layout ===== */
+/* ===== app layout ===== */
 .app{
   min-height: 100%;
   display:flex;
@@ -82,7 +82,7 @@ body{
   align-items:center;
 }
 
-/* ===== Badges ===== */
+/* ===== badges ===== */
 .badge{
   border: 1px solid var(--stroke);
   border-radius: 999px;
@@ -97,7 +97,7 @@ body{
 .badge--ok{ border-color: rgba(0,255,210,0.35); color: rgba(210,255,235,0.95); }
 .badge--bad{ border-color: rgba(255,80,80,0.35); color: rgba(255,214,214,0.95); }
 
-/* ===== Main grid ===== */
+/* ===== main grid ===== */
 .layout{
   width: min(1220px, calc(100% - 28px));
   margin: 18px auto;
@@ -111,7 +111,7 @@ body{
   .layout{ grid-template-columns: 1fr; }
 }
 
-/* ===== Side panel ===== */
+/* ===== side panel ===== */
 .panel{
   display:flex;
   flex-direction: column;
@@ -226,7 +226,7 @@ kbd{
   font-size: 12px;
 }
 
-/* ===== Stage ===== */
+/* ===== stage ===== */
 .stageWrap{
   display:flex;
   flex-direction: column;
@@ -266,7 +266,7 @@ kbd{
   font-size: 12px;
 }
 
-/* ===== House map ===== */
+/* ===== house map ===== */
 .house, #house{
   width: min(900px, 100%);
   aspect-ratio: 900 / 720;
@@ -278,7 +278,6 @@ kbd{
   position: relative;
   overflow: hidden;
 
-  /* SUA IMAGEM DO MAPA */
   background: url("/static/map.jpg") center/contain no-repeat;
 }
 
@@ -294,7 +293,7 @@ kbd{
 #lightCanvas{ z-index: 2; }
 #debugCanvas{ z-index: 4; }
 
-/* ===== Player ===== */
+/* ===== player ===== */
 #player{
   position:absolute;
   width: 22px;
@@ -306,7 +305,7 @@ kbd{
   top: 60px;
 }
 
-/* ===== Footer ===== */
+/* ===== footer ===== */
 .footer{
   margin-top: auto;
   width: min(1220px, calc(100% - 28px));
