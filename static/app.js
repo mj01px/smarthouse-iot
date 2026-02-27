@@ -111,7 +111,7 @@ const WALLS = [
   { wallId: "privada", label: "privada", x:587, y:401, w:37, h:30 },
   { wallId: "parede-direita", label: "parede-direita", x:624, y:134, w:17, h:423 },
   { wallId: "cozinha-banheiro", label: "cozinha-banheiro", x:489, y:334, w:136, h:29 },
-  { wallId: "quina-cozinha", label: "quina-cozinha", x:488, y:300, w:12, h:67 },
+  { wallId: "quina-cozinha", label: "quina-cozinha", x:489, y:304, w:9, h:58 },
   { wallId: "pia-cozinha", label: "pia-cozinha", x:585, y:240, w:39, h:94},
   { wallId: "pia-cozinha", label: "pia-cozinha",  x:489, y:302, w:136, h:33 },
   { wallId: "parede-direita", label: "parede-direita", x:234, y:133, w:405, h:41 },
@@ -119,7 +119,7 @@ const WALLS = [
   { wallId: "cama", label: "cama", x:285, y:168, w:93, h:116},
   { wallId: "abajur", label: "abajur", x:255, y:164, w:32, h:35 },
   { wallId: "abajur", label: "abajur", x:380, y:168, w:27, h:30},
-  { wallId: "parede-quartocozinha", label: "parede-quartocozinha",  x:433, y:134, w:15, h:219 },
+  { wallId: "parede-quartocozinha", label: "parede-quartocozinha",  x:433, y:142, w:8, h:211 },
 
   // limitacao do mapa (bordas)
   { wallId: "limite-baixo",    x:96, y:643, w:682, h:33  },
