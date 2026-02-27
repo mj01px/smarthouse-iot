@@ -41,7 +41,7 @@ Designed to be modular, scalable, and extensible.
 
 ------------------------------------------------------------------------
 
-## 🏠 Simulation Model
+## Simulation Model
 
 The system operates in three main layers:
 
@@ -97,7 +97,7 @@ The system operates in three main layers:
 
 ------------------------------------------------------------------------
 
-## 🚀 Run & Test
+## Run & Test
 
 ### 1. Create virtual environment
 
@@ -123,7 +123,7 @@ http://127.0.0.1:8000
 
 ------------------------------------------------------------------------
 
-## 🎮 Controls
+## Controls
 
   Key       Action
   --------- -------------------------
@@ -177,3 +177,4 @@ Software Engineering Student
 ## License
 
 MIT License --- Educational and experimental purposes.
+
