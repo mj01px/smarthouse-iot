@@ -22,7 +22,7 @@ const FADE_IN_MS = 240;
 const FADE_OUT_MS = 420;
 
 // player
-const player = {x:402, y:581, size: 22, speed: 244 };
+const player = {x:402, y:581, size: 32, speed: 244 };
 let keys = new Set();
 
 // state
@@ -99,27 +99,28 @@ const LIGHT_AREAS = [
 
 // hitbox das objetos do mapa
 const WALLS = [
-  { wallId: "parede-esquerda", label: "parede-esquerda", x:236, y:135, w:21, h:420 },
-  { wallId: "quarto-sala", label: "quarto-sala", x:247, y:324, w:146, h:32 },
+  { wallId: "parede-esquerda", label: "parede-esquerda", x:234, y:137, w:15, h:416 },
+  { wallId: "quarto-sala", label: "quarto-sala", x:250, y:317, w:136, h:37 },
   { wallId: "tv", label: "tv", x:301, y:352, w:74, h:34 },
-  { wallId: "sofa", label: "sofa", x:296, y:487, w:93, h:51 },
-  { wallId: "parede-sofa", label: "parede-sofa", x:236, y:538, w:166, h:17},
-  { wallId: "parede-baixo-banheiro", label: "parede-baixo-banheiro", x:446, y:540, w:194, h:16},
+  { wallId: "sofa", label: "sofa", x:298, y:479, w:92, h:58},
+  { wallId: "parede-sofa", label: "parede-sofa",x:237, y:532, w:160, h:19},
+  { wallId: "parede-baixo-banheiro", label: "parede-baixo-banheiro",x:447, y:534, w:194, h:22},
   { wallId: "sala-banheiro", label: "sala-banheiro", x:486, y:407, w:14, h:134 },
-  { wallId: "pia", label: "pia", x:501, y:507, w:44, h:34 },
+  { wallId: "pia", label: "pia", x:504, y:496, w:40, h:46 },
   { wallId: "banheira", label: "banheira",  x:571, y:456, w:53, h:83 },
-  { wallId: "privada", label: "privada", x:587, y:401, w:37, h:30 },
+  { wallId: "privada", label: "privada",  x:589, y:400, w:32, h:35 },
   { wallId: "parede-direita", label: "parede-direita", x:624, y:134, w:17, h:423 },
   { wallId: "cozinha-banheiro", label: "cozinha-banheiro", x:489, y:334, w:136, h:29 },
   { wallId: "quina-cozinha", label: "quina-cozinha", x:489, y:304, w:9, h:58 },
   { wallId: "pia-cozinha", label: "pia-cozinha", x:585, y:240, w:39, h:94},
   { wallId: "pia-cozinha", label: "pia-cozinha",  x:489, y:302, w:136, h:33 },
-  { wallId: "parede-direita", label: "parede-direita", x:234, y:133, w:405, h:41 },
+  { wallId: "parede-cima", label: "parede-cima", x:234, y:119, w:408, h:32 },
   { wallId: "fogao-geladeira", label: "fogao-geladeira",  x:442, y:170, w:177, h:46 },
-  { wallId: "cama", label: "cama", x:285, y:168, w:93, h:116},
+  { wallId: "cama", label: "cama", x:287, y:170, w:91, h:104},
   { wallId: "abajur", label: "abajur", x:255, y:164, w:32, h:35 },
-  { wallId: "abajur", label: "abajur", x:380, y:168, w:27, h:30},
+  { wallId: "abajur", label: "abajur", x:380, y:172, w:18, h:21},
   { wallId: "parede-quartocozinha", label: "parede-quartocozinha",  x:433, y:142, w:8, h:211 },
+  { roomId: "box-pia", label: "box-pia", x:489, y:293, w:98, h:11 },
 
   // limitacao do mapa (bordas)
   { wallId: "limite-baixo",    x:96, y:643, w:682, h:33  },
