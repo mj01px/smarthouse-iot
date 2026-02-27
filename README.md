@@ -1,3 +1,4 @@
 ﻿# smarthouse-iot
 
-p roda uvicorn backend.main:app --reload
+para rodar:  uvicorn backend.main:app --reload
+
