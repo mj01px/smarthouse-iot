@@ -1,5 +1,3 @@
-console.log("app.js carregou ✅");
-
 const house = document.getElementById("house");
 const playerEl = document.getElementById("player");
 const wsStatus = document.getElementById("wsStatus");
