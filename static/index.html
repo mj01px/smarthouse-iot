@@ -1,93 +1,96 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>SmartHome Presence Simulator</title>
-  <link rel="stylesheet" href="/static/styles.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>SmartHome Presence Simulator</title>
+    <link rel="stylesheet" href="/static/styles.css"/>
 </head>
 
 <body>
-  <div class="app">
+<div class="app">
     <header class="topbar">
-      <div class="brand">
-        <div class="logo">🏠</div>
-        <div class="brandText">
-          <h1>SmartHome Presence</h1>
-          <p>Simulação de presença • FastAPI + WebSocket • mapa 2D</p>
+        <div class="brand">
+            <div class="logo">🏠</div>
+            <div class="brandText">
+                <h1>SmartHome Presence</h1>
+                <p>Simulação de presença • FastAPI + WebSocket • mapa 2D</p>
+            </div>
         </div>
-      </div>
 
-      <div class="badges">
-        <span id="wsStatus" class="badge badge--neutral">WS: conectando…</span>
-        <span id="roomStatus" class="badge badge--neutral">Cômodo: —</span>
-      </div>
+        <div class="badges">
+            <span id="wsStatus" class="badge badge--neutral">WS: conectando…</span>
+            <span id="roomStatus" class="badge badge--neutral">Cômodo: —</span>
+        </div>
     </header>
 
     <div class="layout">
-      <aside class="panel">
-        <section class="card">
-          <h2>Status</h2>
-          <div class="kv">
-            <div class="k">Conexão</div>
-            <div class="v"><span id="wsStatusSide" class="dot dot--warn"></span><span class="muted">WebSocket</span></div>
+        <aside class="panel">
+            <section class="card">
+                <h2>Status</h2>
+                <div class="kv">
+                    <div class="k">Conexão</div>
+                    <div class="v"><span id="wsStatusSide" class="dot dot--warn"></span><span
+                            class="muted">WebSocket</span></div>
 
-            <div class="k">Cômodo</div>
-            <div class="v"><span class="muted" id="roomStatusSide">—</span></div>
-          </div>
-        </section>
+                    <div class="k">Cômodo</div>
+                    <div class="v"><span class="muted" id="roomStatusSide">—</span></div>
+                </div>
+            </section>
 
-        <section class="card">
-          <h2>Controles</h2>
-          <ul class="list">
-            <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> mover</li>
-            <li><kbd>H</kbd> mostrar debug</li>
-            <li><kbd>C</kbd> modo calibrar</li>
-          </ul>
-          <div class="hint">
-            Dica: no modo calibrar, arrasta e solta no mapa e pega o <span class="mono">{x,y,w,h}</span> no Console.
-          </div>
-        </section>
+            <section class="card">
+                <h2>Controles</h2>
+                <ul class="list">
+                    <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> mover</li>
+                    <li><kbd>H</kbd> mostrar debug</li>
+                    <li><kbd>C</kbd> modo calibrar</li>
+                </ul>
+                <div class="hint">
+                    Dica: no modo calibrar, arrasta e solta no mapa e pega o <span class="mono">{x,y,w,h}</span> no
+                    Console.
+                </div>
+            </section>
 
-        <section class="card">
-          <h2>Sobre</h2>
-          <p class="muted">
-            Esse front só simula presença. O backend recebe transições de cômodo e responde com comandos de ligar/desligar.
-          </p>
-          <div class="pillRow">
-            <span class="pill">Sem banco</span>
-            <span class="pill">2D</span>
-            <span class="pill">Realtime</span>
-          </div>
-        </section>
-      </aside>
+            <section class="card">
+                <h2>Sobre</h2>
+                <p class="muted">
+                    Esse front só simula presença. O backend recebe transições de cômodo e responde com comandos de
+                    ligar/desligar.
+                </p>
+                <div class="pillRow">
+                    <span class="pill">Sem banco</span>
+                    <span class="pill">2D</span>
+                    <span class="pill">Realtime</span>
+                </div>
+            </section>
+        </aside>
 
-      <main class="stageWrap">
-        <div class="stageHeader">
-          <div class="stageTitle">
-            <h2>Mapa</h2>
-            <p class="muted">A luz segue o cômodo “ativo” pelo backend</p>
-          </div>
-          <div class="stageTools">
-            <span class="chip">1024×1024</span>
-            <span class="chip">Canvas lighting</span>
-          </div>
-        </div>
+        <main class="stageWrap">
+            <div class="stageHeader">
+                <div class="stageTitle">
+                    <h2>Mapa</h2>
+                    <p class="muted">A luz segue o cômodo “ativo” pelo backend</p>
+                </div>
+                <div class="stageTools">
+                    <span class="chip">1024×1024</span>
+                    <span class="chip">Canvas lighting</span>
+                </div>
+            </div>
 
-        <main id="house" class="house" aria-label="Mapa da casa">
-          <canvas id="lightCanvas"></canvas>
-          <div id="player" title="player"></div>
-          <canvas id="debugCanvas"></canvas>
+            <main id="house" class="house" aria-label="Mapa da casa">
+                <canvas id="lightCanvas"></canvas>
+                <div id="player" title="player"></div>
+                <canvas id="debugCanvas"></canvas>
+            </main>
         </main>
-      </main>
     </div>
 
     <footer class="footer">
-      <span class="muted">© SmartHome IoT • Presence Simulator</span>
+        <span class="muted">© SmartHome IoT • Presence Simulator</span>
     </footer>
-  </div>
+</div>
 
-  <script>
+<script>
     // espelha os badges do topo no painel (sem depender do app.js)
     const wsTop = document.getElementById("wsStatus");
     const roomTop = document.getElementById("roomStatus");
@@ -95,16 +98,16 @@
     const roomSide = document.getElementById("roomStatusSide");
 
     const sync = () => {
-      if (roomSide && roomTop) roomSide.textContent = roomTop.textContent.replace("Cômodo:", "").trim();
-      if (wsDot && wsTop) {
-        const txt = wsTop.textContent.toLowerCase();
-        wsDot.className = "dot " + (txt.includes("conectado") ? "dot--ok" : txt.includes("desconectado") ? "dot--bad" : "dot--warn");
-      }
-      requestAnimationFrame(sync);
+        if (roomSide && roomTop) roomSide.textContent = roomTop.textContent.replace("Cômodo:", "").trim();
+        if (wsDot && wsTop) {
+            const txt = wsTop.textContent.toLowerCase();
+            wsDot.className = "dot " + (txt.includes("conectado") ? "dot--ok" : txt.includes("desconectado") ? "dot--bad" : "dot--warn");
+        }
+        requestAnimationFrame(sync);
     };
     sync();
-  </script>
+</script>
 
-  <script src="/static/app.js"></script>
+<script src="/static/app.js"></script>
 </body>
 </html>

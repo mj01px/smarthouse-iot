@@ -94,7 +94,7 @@ const LIGHT_AREAS = [
 
   { roomId: "banheiro", label: "Banheiro",  x:497, y:342, w:125, h:199 },
 
-  { roomId: "cozinha", label: "Cozinha",  x:442, y:149, w:183, h:185  },
+  { roomId: "cozinha", label: "Cozinha",  x:442, y:149, w: 183, h: 185},
 
   { roomId: "quarto", label: "Quarto", x:250, y:148, w:184, h:178 },
 ];
