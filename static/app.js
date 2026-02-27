@@ -90,13 +90,13 @@ function setLightTarget(nextRoomId) {
 
 // areas luminosas
 const LIGHT_AREAS = [
-  { roomId: "sala", label: "Sala", x:250, y:335, w:239, h:205 },
+  { roomId: "Sala", label: "Sala", x:250, y:335, w:239, h:205 },
 
-  { roomId: "banheiro", label: "Banheiro",  x:497, y:342, w:125, h:199 },
+  { roomId: "Banheiro", label: "Banheiro",  x:497, y:342, w:125, h:199 },
 
-  { roomId: "cozinha", label: "Cozinha",  x:442, y:149, w: 183, h: 185},
+  { roomId: "Cozinha", label: "Cozinha",  x:442, y:149, w: 183, h: 185},
 
-  { roomId: "quarto", label: "Quarto", x:250, y:148, w:184, h:178 },
+  { roomId: "Quarto", label: "Quarto", x:250, y:148, w:184, h:178 },
 ];
 
 // hitbox das objetos do mapa
