@@ -111,7 +111,7 @@ Mac/Linux: source .venv/bin/activate
 
 ### 3. Install dependencies
 
-pip install fastapi uvicorn\[standard\]
+pip install -r requirements.txt
 
 ### 4. Start server
 
@@ -174,7 +174,4 @@ Software Engineering Student
 
 ------------------------------------------------------------------------
 
-## License
-
-MIT License --- Educational and experimental purposes.
 
