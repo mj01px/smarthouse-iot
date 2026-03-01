@@ -105,7 +105,7 @@ python -m venv .venv
 
 ### 2. Activate
 
-Windows: .venv`\Scripts`{=tex}`\activate`{=tex}
+Windows: .venv\Scripts\activate
 
 Mac/Linux: source .venv/bin/activate
 
@@ -173,5 +173,6 @@ for room and wall configuration.
 Software Engineering Student
 
 ------------------------------------------------------------------------
+
 
 
