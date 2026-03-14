@@ -4,3 +4,4 @@ venv/
 
 # Configurações da IDE (PyCharm, IntelliJ)
 .idea/
+backend/__pycache__/main.cpython-314.pyc
