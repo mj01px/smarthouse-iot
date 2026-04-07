@@ -502,6 +502,7 @@ function tick(t) {
   requestAnimationFrame(tick);
 }
 
+
 // boot
 window.addEventListener("resize", resizeCanvases);
 resizeCanvases();
